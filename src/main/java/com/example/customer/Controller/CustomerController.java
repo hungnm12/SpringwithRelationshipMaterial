@@ -20,11 +20,11 @@ public class CustomerController {
         return customerService.getAllCustomers();
     }
 
-    @GetMapping("/save")
+    @PostMapping("/save")
     public Customer createCustomer(@RequestBody Customer customer) {
         return  customerService.createCustomer(customer);
     }
-    @GetMapping("/update")
+    @PutMapping("/update")
     public ResponseEntity<Customer> updateCustomer(@PathVariable(value = "id") int id, @RequestBody Customer customerDetails) {
         final Customer updatedCustomer = customerService.updateCustomer(id, customerDetails);
         return ResponseEntity.ok(updatedCustomer);

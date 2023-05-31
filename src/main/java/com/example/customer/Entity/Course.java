@@ -17,6 +17,8 @@ public class Course {
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "courses")
     private List<Customer> customers = new ArrayList<>();
 
+    public Course() {
+    }
 
     public Course(int courseid, String courseName, String description, List<Customer> customers) {
         this.courseid = courseid;
@@ -55,5 +57,16 @@ public class Course {
 
     public void setCustomers(List<Customer> customers) {
         this.customers = customers;
+    }
+
+    @Override
+    public String toString() {
+        return"Course{" +
+                "courseid=" + courseid +
+                ", coursename='" + courseName + '\'' +
+                ", description='" + description + '\'' +
+
+                ", customer='" + customers +
+                '}';
     }
 }

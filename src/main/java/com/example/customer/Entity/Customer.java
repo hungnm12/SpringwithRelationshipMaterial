@@ -71,4 +71,15 @@ public class Customer {
     public void setCourses(List<Course> courses) {
         this.courses = courses;
     }
+
+    @Override
+    public String toString() {
+        return"Customer{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", address='" + address + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", course='" + courses +
+                '}';
+    }
 }
