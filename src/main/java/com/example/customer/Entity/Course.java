@@ -9,6 +9,7 @@ import java.util.List;
 @Entity
 public class Course {
     @Id
+    @Column(name = "course_id", length = 50)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int courseid;
     @Column(name = "course_name")

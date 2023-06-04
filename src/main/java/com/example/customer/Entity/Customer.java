@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 public class Customer {
     @Id
+    @Column(name = "customer_id",length = 50)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name = "customer_name", length = 60)
